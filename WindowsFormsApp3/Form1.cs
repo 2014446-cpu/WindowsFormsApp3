@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//This is the new content i just made
+
 namespace WindowsFormsApp3
 {
     public partial class Form1 : Form
@@ -30,6 +32,45 @@ namespace WindowsFormsApp3
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCheckOut_Click(object sender, EventArgs e)
+        {
+            ShowScreen(new UC_CheckOut());
+        }
+
+        private void btnOrders_Click(object sender, EventArgs e)
+        {
+            ShowScreen(new UC_Orders());
+        }
+
+        // This can be reused for showing any UserControl
+        private void ShowScreen(UserControl newScreen)
+        {
+            // Find existing controls and dispose them to free memory
+            foreach (Control ctrl in pnlContent.Controls)
+            {
+                ctrl.Dispose();
+            }
+
+            pnlContent.Controls.Clear(); // Clear the controls
+            newScreen.Dock = DockStyle.Fill; // Set Dock to Fill
+            pnlContent.Controls.Add(newScreen); // Add the UC to Pnl
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ShowScreen(new Home());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ShowScreen(new Product());
         }
     }
 }
