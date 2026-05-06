@@ -19,10 +19,7 @@ namespace WindowsFormsApp3
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -63,14 +60,24 @@ namespace WindowsFormsApp3
             pnlContent.Controls.Add(newScreen); // Add the UC to Pnl
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
         {
             ShowScreen(new Home());
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnInv_Click(object sender, EventArgs e)
         {
-            ShowScreen(new Product());
+            ShowScreen(new Inventory());
+        }
+
+        private void pnlContent_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

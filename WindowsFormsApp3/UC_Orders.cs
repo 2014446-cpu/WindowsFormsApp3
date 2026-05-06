@@ -12,6 +12,7 @@ namespace WindowsFormsApp3
 {
     public partial class UC_Orders : UserControl
     {
+
         public UC_Orders()
         {
             InitializeComponent();
