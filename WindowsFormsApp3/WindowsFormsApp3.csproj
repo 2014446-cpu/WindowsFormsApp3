@@ -77,12 +77,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Product.cs">
+    <Compile Include="InventoryService.cs" />
+    <Compile Include="Product1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Product.Designer.cs">
-      <DependentUpon>Product.cs</DependentUpon>
+    <Compile Include="Product1.Designer.cs">
+      <DependentUpon>Product1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Product.cs" />
     <Compile Include="UC_CheckOut.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -121,8 +123,8 @@
     <Compile Include="UserControl2.Designer.cs">
       <DependentUpon>UserControl2.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Product.resx">
-      <DependentUpon>Product.cs</DependentUpon>
+    <EmbeddedResource Include="Product1.resx">
+      <DependentUpon>Product1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_CheckOut.resx">
       <DependentUpon>UC_CheckOut.cs</DependentUpon>

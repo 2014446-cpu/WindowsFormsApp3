@@ -10,15 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class Inventory : UserControl
+    public partial class Product1 : UserControl
     {
-        public Inventory()
+        public Product1()
         {
             InitializeComponent();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
 
         }
     }
