@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="InventoryService.cs" />
+    <Compile Include="OrderModel.cs" />
     <Compile Include="Product1.cs">
       <SubType>UserControl</SubType>
     </Compile>

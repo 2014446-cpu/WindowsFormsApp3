@@ -12,14 +12,24 @@ namespace WindowsFormsApp3
 {
     public partial class Inventory : UserControl
     {
+        private BindingList<Product> _inventoryList = new BindingList<Product>();
+        private BindingSource bindingSource = new BindingSource();
+        string filePath = "./product.csv";
         public Inventory()
         {
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void Inventory_Load(object sender, EventArgs e)
         {
+            var tempData = InventoryService.LoadFromCSV(filePath);
+            _inventoryList.Clear();
 
+            foreach (var item in tempData)
+            {
+                _inventoryList.Add(item);
+            }
+            
         }
     }
 }
