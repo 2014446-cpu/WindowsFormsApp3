@@ -14,6 +14,7 @@ namespace WindowsFormsApp3
     {
         private BindingList<Product> _inventoryList = new BindingList<Product>();
         private BindingSource bindingSource = new BindingSource();
+        protected string PathToCSV = @"H:\Programming\shop-product-catalog.csv - Copy.csv";
         string filePath = "./product.csv";
         public Inventory()
         {
