@@ -14,7 +14,6 @@ namespace WindowsFormsApp3
     {
         private BindingList<Product> _inventoryList = new BindingList<Product>();
         private BindingSource bindingSource = new BindingSource();
-        protected string PathToCSV = @"H:\Programming\shop-product-catalog.csv - Copy.csv";
         string filePath = "./product.csv";
         public Inventory()
         {
@@ -23,14 +22,17 @@ namespace WindowsFormsApp3
 
         private void Inventory_Load(object sender, EventArgs e)
         {
-            var tempData = InventoryService.LoadFromCSV(filePath);
+            string path = filePath;
+            
+            var tempData = InventoryService.LoadFromCSV(path);
             _inventoryList.Clear();
 
             foreach (var item in tempData)
             {
                 _inventoryList.Add(item);
             }
-            
+  
+            dataGridView1.DataSource = _inventoryList;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -12,7 +12,6 @@ namespace WindowsFormsApp3
         public static List<Product> LoadFromCSV(string filePath)
         {
             List<Product> products = new List<Product>();
-
             if (!File.Exists(filePath)) return products;
 
             var lines = File.ReadAllLines(filePath).Skip(1);
