@@ -33,7 +33,7 @@ namespace WindowsFormsApp3
                 _inventoryList.Add(item);
             }
 
-            dgv.DataSource = _inventoryList;
+            dgvInventory.DataSource = _inventoryList;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -93,5 +93,107 @@ namespace WindowsFormsApp3
         {
 
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            // 1. Check if a Product ID is present to identify the record
+            if (!int.TryParse(txtID.Text, out int idToUpdate))
+            {
+                MessageBox.Show("Please select a product from the grid to update.");
+                return;
+            }
+
+            // 2. Find the product in the BindingList using the ID
+            var productToUpdate = _inventoryList.FirstOrDefault(p => p.ProductID == idToUpdate);
+
+            if (productToUpdate != null)
+            {
+                // 3. Validate the new inputs before applying changes
+                if (ValidateInputs())
+                {
+                    // 4. Update the object properties (excluding ProductID)
+                    productToUpdate.ProductName = txtName.Text;
+                    productToUpdate.ProductBrand = txtBrand.Text;
+                    productToUpdate.ProductPrice = decimal.Parse(txtPrice.Text);
+                    productToUpdate.ProductQuantity = int.Parse(txtQuantity.Text);
+
+                    // 5. Refresh the grid to show the updated data
+                    _bindingSource.ResetBindings(false);
+                    dgvInventory.Refresh();
+
+                    // 6. Clear input fields
+                    ClearFields();
+                    MessageBox.Show("Product updated successfully in the list.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Product ID not found in inventory.");
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string searchTerm = txtDelete.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(searchTerm))
+            {
+                MessageBox.Show("Please enter a valid Product ID or Name to delete.");
+                return;
+            }
+
+            // Find the product in the BindingList
+            // This checks if the ID matches OR if the Name matches (ignoring case)
+            Product productToDelete = _inventoryList.FirstOrDefault(p =>
+                p.ProductID.ToString() == searchTerm ||
+                p.ProductName.Equals(searchTerm, StringComparison.OrdinalIgnoreCase));
+
+            if (productToDelete != null)
+            {
+                // Confirm deletion with the user
+                DialogResult result = MessageBox.Show($"Are you sure you want to delete {productToDelete.ProductName}?",
+                    $"Confirm Delete", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    // Remove from the BindingList (the grid will update automatically)
+                    _inventoryList.Remove(productToDelete);
+
+
+
+                    txtDelete.Clear();
+                    MessageBox.Show("Product deleted successfully.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No product found matching that ID or Name.");
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string path = filePath;
+
+                // Convert the BindingList to a standard List to pass to the service
+                List<Product> listToSave = _inventoryList.ToList();
+
+                // Call the save method
+                InventoryService.SaveToCSV(path, listToSave);
+
+                MessageBox.Show("Changes saved to CSV successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error saving data: " + ex.Message);
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+
+        }
     }
-}
+    }
