@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.gbProductDetails = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtDelete = new System.Windows.Forms.TextBox();
             this.txtBrand = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -41,8 +41,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.txtDelete = new System.Windows.Forms.TextBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.dgvInventory = new System.Windows.Forms.DataGridView();
             this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,9 +51,8 @@
             this.ProductBrand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gbProductDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             this.panel2.SuspendLayout();
@@ -80,6 +80,16 @@
             this.gbProductDetails.TabIndex = 0;
             this.gbProductDetails.TabStop = false;
             this.gbProductDetails.Text = "Product Details";
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(78, 228);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(119, 19);
+            this.btnClear.TabIndex = 17;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // txtQuantity
             // 
@@ -113,13 +123,6 @@
             this.label4.Size = new System.Drawing.Size(18, 13);
             this.label4.TabIndex = 13;
             this.label4.Text = "ID";
-            // 
-            // txtDelete
-            // 
-            this.txtDelete.Location = new System.Drawing.Point(88, 18);
-            this.txtDelete.Name = "txtDelete";
-            this.txtDelete.Size = new System.Drawing.Size(88, 20);
-            this.txtDelete.TabIndex = 12;
             // 
             // txtBrand
             // 
@@ -179,16 +182,6 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(0, 19);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(82, 19);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(21, 253);
@@ -198,6 +191,23 @@
             this.btnAdd.Text = "Add Product";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // txtDelete
+            // 
+            this.txtDelete.Location = new System.Drawing.Point(88, 18);
+            this.txtDelete.Name = "txtDelete";
+            this.txtDelete.Size = new System.Drawing.Size(88, 20);
+            this.txtDelete.TabIndex = 12;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(0, 19);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(82, 19);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // dgvInventory
             // 
@@ -265,17 +275,6 @@
             this.panel2.Size = new System.Drawing.Size(805, 492);
             this.panel2.TabIndex = 2;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnDelete);
-            this.groupBox2.Controls.Add(this.txtDelete);
-            this.groupBox2.Location = new System.Drawing.Point(19, 337);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(273, 58);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Delete Product with ID/Name";
-            // 
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(76, 432);
@@ -286,15 +285,16 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnClear
+            // groupBox2
             // 
-            this.btnClear.Location = new System.Drawing.Point(57, 228);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(140, 19);
-            this.btnClear.TabIndex = 17;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.groupBox2.Controls.Add(this.btnDelete);
+            this.groupBox2.Controls.Add(this.txtDelete);
+            this.groupBox2.Location = new System.Drawing.Point(19, 337);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(273, 58);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Delete Product with ID/Name";
             // 
             // Inventory
             // 

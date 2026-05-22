@@ -28,252 +28,167 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBrand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnLoadOrder = new System.Windows.Forms.Button();
+            this.btnSaveOrder = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.btnCheckout = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnAddToOrder = new System.Windows.Forms.Button();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.txtOrderName = new System.Windows.Forms.TextBox();
+            this.dgvCurrentOrder = new System.Windows.Forms.DataGridView();
+            this.dgvAvailable = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCurrentOrder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAvailable)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // btnLoadOrder
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colID,
-            this.colName,
-            this.colPrice,
-            this.colBrand,
-            this.colQuantity});
-            this.dataGridView1.Location = new System.Drawing.Point(350, 82);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(393, 341);
-            this.dataGridView1.TabIndex = 3;
+            this.btnLoadOrder.Location = new System.Drawing.Point(770, 399);
+            this.btnLoadOrder.Name = "btnLoadOrder";
+            this.btnLoadOrder.Size = new System.Drawing.Size(75, 23);
+            this.btnLoadOrder.TabIndex = 23;
+            this.btnLoadOrder.Text = "Load Order";
+            this.btnLoadOrder.UseVisualStyleBackColor = true;
             // 
-            // colID
+            // btnSaveOrder
             // 
-            this.colID.HeaderText = "ID";
-            this.colID.Name = "colID";
-            this.colID.ReadOnly = true;
-            // 
-            // colName
-            // 
-            this.colName.HeaderText = "Name";
-            this.colName.Name = "colName";
-            this.colName.ReadOnly = true;
-            // 
-            // colPrice
-            // 
-            this.colPrice.HeaderText = "Price";
-            this.colPrice.Name = "colPrice";
-            this.colPrice.ReadOnly = true;
-            // 
-            // colBrand
-            // 
-            this.colBrand.HeaderText = "Brand";
-            this.colBrand.Name = "colBrand";
-            this.colBrand.ReadOnly = true;
-            // 
-            // colQuantity
-            // 
-            this.colQuantity.HeaderText = "Quantity";
-            this.colQuantity.Name = "colQuantity";
-            this.colQuantity.ReadOnly = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Location = new System.Drawing.Point(30, 82);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(296, 341);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(97, 173);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 16;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 176);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 13);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Quantity";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(97, 16);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 14;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 23);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(18, 13);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "ID";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(97, 284);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(88, 20);
-            this.textBox4.TabIndex = 12;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(97, 137);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 11;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(97, 100);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 10;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(97, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 9;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 140);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Brand";
+            this.btnSaveOrder.Location = new System.Drawing.Point(559, 399);
+            this.btnSaveOrder.Name = "btnSaveOrder";
+            this.btnSaveOrder.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveOrder.TabIndex = 22;
+            this.btnSaveOrder.Text = "Save Order";
+            this.btnSaveOrder.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 103);
+            this.label2.Location = new System.Drawing.Point(745, 163);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Price";
+            this.label2.Size = new System.Drawing.Size(89, 13);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Order Description";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 59);
+            this.label1.Location = new System.Drawing.Point(745, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Name";
+            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Order Name";
             // 
-            // button6
+            // btnCheckout
             // 
-            this.button6.Location = new System.Drawing.Point(97, 230);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(88, 19);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Update";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnCheckout.Location = new System.Drawing.Point(394, 399);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.Size = new System.Drawing.Size(75, 23);
+            this.btnCheckout.TabIndex = 19;
+            this.btnCheckout.Text = "button3";
+            this.btnCheckout.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnRemove
             // 
-            this.button5.Location = new System.Drawing.Point(6, 285);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(82, 19);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Delete";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnRemove.Location = new System.Drawing.Point(217, 399);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(133, 23);
+            this.btnRemove.TabIndex = 18;
+            this.btnRemove.Text = "Remove from Order";
+            this.btnRemove.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnAddToOrder
             // 
-            this.button4.Location = new System.Drawing.Point(6, 230);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(82, 19);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Add Product";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnAddToOrder.Location = new System.Drawing.Point(70, 399);
+            this.btnAddToOrder.Name = "btnAddToOrder";
+            this.btnAddToOrder.Size = new System.Drawing.Size(75, 23);
+            this.btnAddToOrder.TabIndex = 17;
+            this.btnAddToOrder.Text = "Add to Order";
+            this.btnAddToOrder.UseVisualStyleBackColor = true;
             // 
-            // UserControl1
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(741, 58);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(44, 20);
+            this.lblTotal.TabIndex = 16;
+            this.lblTotal.Text = "Total";
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.Location = new System.Drawing.Point(745, 179);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(100, 20);
+            this.txtDescription.TabIndex = 15;
+            // 
+            // txtOrderName
+            // 
+            this.txtOrderName.Location = new System.Drawing.Point(745, 125);
+            this.txtOrderName.Name = "txtOrderName";
+            this.txtOrderName.Size = new System.Drawing.Size(100, 20);
+            this.txtOrderName.TabIndex = 14;
+            // 
+            // dgvCurrentOrder
+            // 
+            this.dgvCurrentOrder.AllowDrop = true;
+            this.dgvCurrentOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCurrentOrder.Location = new System.Drawing.Point(217, 58);
+            this.dgvCurrentOrder.Name = "dgvCurrentOrder";
+            this.dgvCurrentOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCurrentOrder.Size = new System.Drawing.Size(504, 324);
+            this.dgvCurrentOrder.TabIndex = 13;
+            // 
+            // dgvAvailable
+            // 
+            this.dgvAvailable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAvailable.Location = new System.Drawing.Point(36, 58);
+            this.dgvAvailable.Name = "dgvAvailable";
+            this.dgvAvailable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAvailable.Size = new System.Drawing.Size(145, 324);
+            this.dgvAvailable.TabIndex = 12;
+            // 
+            // UC_Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.groupBox1);
-            this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(773, 504);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Controls.Add(this.btnLoadOrder);
+            this.Controls.Add(this.btnSaveOrder);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnCheckout);
+            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnAddToOrder);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.txtDescription);
+            this.Controls.Add(this.txtOrderName);
+            this.Controls.Add(this.dgvCurrentOrder);
+            this.Controls.Add(this.dgvAvailable);
+            this.Name = "UC_Orders";
+            this.Size = new System.Drawing.Size(890, 500);
+            this.Load += new System.EventHandler(this.UC_Orders_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCurrentOrder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAvailable)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colBrand;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colQuantity;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnLoadOrder;
+        private System.Windows.Forms.Button btnSaveOrder;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnCheckout;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnAddToOrder;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.TextBox txtOrderName;
+        private System.Windows.Forms.DataGridView dgvCurrentOrder;
+        private System.Windows.Forms.DataGridView dgvAvailable;
     }
 }
