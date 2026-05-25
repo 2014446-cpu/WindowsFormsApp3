@@ -35,6 +35,7 @@
             this.btnOrders = new System.Windows.Forms.Button();
             this.btnCheckOut = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.pnlContent.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -108,6 +109,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.btnCheckOut);
             this.panel1.Controls.Add(this.btnOrders);
             this.panel1.Controls.Add(this.button2);
@@ -119,6 +121,16 @@
             this.panel1.Size = new System.Drawing.Size(267, 620);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(3, 593);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(126, 27);
+            this.btnLogout.TabIndex = 4;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // Form1
             // 
@@ -146,6 +158,7 @@
         private System.Windows.Forms.Button btnOrders;
         private System.Windows.Forms.Button btnCheckOut;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnLogout;
     }
 }
 

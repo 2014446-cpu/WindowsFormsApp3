@@ -82,5 +82,23 @@ namespace WindowsFormsApp3
         {
 
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                            "Are you sure you want to log out?",
+                            "Confirmation",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question
+                        );
+
+            if (result == DialogResult.Yes)
+            {
+                Form2 form2 = new Form2();
+                form2.Show();
+
+                this.Hide();
+            }
+        }
     }
 }

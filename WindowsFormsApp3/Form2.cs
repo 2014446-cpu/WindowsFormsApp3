@@ -28,8 +28,8 @@ namespace WindowsFormsApp3
 
 
 
-            string username = "admin";
-            string password = "12345";
+            string username = "Coldshi184";
+            string password = "Coldsh!D&C184";
 
 
             if (username == txtUsername.Text && password == txtPassword.Text)
