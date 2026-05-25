@@ -32,7 +32,11 @@ namespace WindowsFormsApp3
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            ShowScreen(new UC_Home());
+        }
+        private void LoadUCHome()
+        {
+            ShowScreen(new UC_Home());
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e)

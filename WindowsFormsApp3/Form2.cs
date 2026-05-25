@@ -20,11 +20,19 @@ namespace WindowsFormsApp3
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text.Trim();
-            string password = txtPassword.Text.Trim();
-           
+            if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
+            { 
+            MessageBox.Show("Please enter both username and password.");
+                return;
+            }
 
-            if (username == "admin" && password == "12345")
+
+
+            string username = "admin";
+            string password = "12345";
+
+
+            if (username == txtUsername.Text && password == txtPassword.Text)
             {
                 Form1 newForm = new Form1(); // Create an instance of Form1
                 this.Hide(); // Optionally hide the current form
@@ -33,6 +41,18 @@ namespace WindowsFormsApp3
             else
             {
                 MessageBox.Show("Invalid username or password.");
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                txtPassword.UseSystemPasswordChar = false; // Show password
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = true; // Hide password
             }
         }
     }
