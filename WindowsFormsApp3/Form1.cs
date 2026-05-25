@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-//This is the new content i just made
 
 namespace WindowsFormsApp3
 {
