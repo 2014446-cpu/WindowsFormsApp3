@@ -67,12 +67,12 @@ namespace WindowsFormsApp3
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            ShowScreen(new Home());
+            ShowScreen(new UC_Home());
         }
 
         private void btnInv_Click(object sender, EventArgs e)
         {
-            ShowScreen(new Inventory());
+            ShowScreen(new UC_Inventory());
         }
 
         private void pnlContent_Click(object sender, EventArgs e)

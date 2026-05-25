@@ -11,12 +11,12 @@ using System.Text.RegularExpressions;
 
 namespace WindowsFormsApp3
 {
-    public partial class Inventory : UserControl
+    public partial class UC_Inventory : UserControl
     {
         private BindingList<Product> _inventoryList = new BindingList<Product>();
         private BindingSource _bindingSource = new BindingSource();
         string filePath = "./product.csv";
-        public Inventory()
+        public UC_Inventory()
         {
             InitializeComponent();
         }

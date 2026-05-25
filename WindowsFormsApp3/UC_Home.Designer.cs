@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp3
 {
-    partial class Home
+    partial class UC_Home
     {
         /// <summary> 
         /// Required designer variable.

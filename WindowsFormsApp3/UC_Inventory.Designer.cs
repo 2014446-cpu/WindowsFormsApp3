@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp3
 {
-    partial class Inventory
+    partial class UC_Inventory
     {
         /// <summary> 
         /// Required designer variable.

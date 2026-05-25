@@ -77,6 +77,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="InventoryService.cs" />
     <Compile Include="OrderModel.cs" />
     <Compile Include="Product1.cs">
@@ -98,11 +104,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventory.cs">
+    <Compile Include="UC_Inventory.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Inventory.Designer.cs">
-      <DependentUpon>Inventory.cs</DependentUpon>
+    <Compile Include="UC_Inventory.Designer.cs">
+      <DependentUpon>UC_Inventory.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -112,11 +118,11 @@
     <Compile Include="UC_Orders.Designer.cs">
       <DependentUpon>UC_Orders.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home.cs">
+    <Compile Include="UC_Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="UC_Home.Designer.cs">
+      <DependentUpon>UC_Home.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl2.cs">
       <SubType>UserControl</SubType>
@@ -124,6 +130,9 @@
     <Compile Include="UserControl2.Designer.cs">
       <DependentUpon>UserControl2.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Product1.resx">
       <DependentUpon>Product1.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,8 +142,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventory.resx">
-      <DependentUpon>Inventory.cs</DependentUpon>
+    <EmbeddedResource Include="UC_Inventory.resx">
+      <DependentUpon>UC_Inventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -148,8 +157,8 @@
     <EmbeddedResource Include="UC_Orders.resx">
       <DependentUpon>UC_Orders.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="UC_Home.resx">
+      <DependentUpon>UC_Home.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="product.csv">
