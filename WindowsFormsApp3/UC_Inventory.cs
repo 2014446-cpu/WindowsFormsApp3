@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace WindowsFormsApp3
 {
@@ -15,7 +16,7 @@ namespace WindowsFormsApp3
     {
         private BindingList<Product> _inventoryList = new BindingList<Product>();
         private BindingSource _bindingSource = new BindingSource();
-        string filePath = "./product.csv";
+        string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "product.csv");
         public UC_Inventory()
         {
             InitializeComponent();
@@ -60,9 +61,10 @@ namespace WindowsFormsApp3
             // This regex allows only letters, numbers, and spaces
             if (!Regex.IsMatch(txtName.Text, @"^[a-zA-Z0-9 ]+$"))
             {
-                MessageBox.Show("Product Name contains invalid characters.");
+                MessageBox.Show("Product Name contains invalid characters or is blank.");
                 return false;
             }
+
 
             // Check if Price is a positive decimal
             if (!decimal.TryParse(txtPrice.Text, out decimal price) || price < 0)
@@ -99,7 +101,7 @@ namespace WindowsFormsApp3
             // 1. Check if a Product ID is present to identify the record
             if (!int.TryParse(txtID.Text, out int idToUpdate))
             {
-                MessageBox.Show("Please select a product from the grid to update.");
+                MessageBox.Show("Please select a product from the grid to update by entering product ID.");
                 return;
             }
 

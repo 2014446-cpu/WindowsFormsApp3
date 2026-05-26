@@ -42,7 +42,7 @@
             // 
             // pnlContent
             // 
-            this.pnlContent.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlContent.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pnlContent.Controls.Add(this.label1);
             this.pnlContent.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnlContent.Location = new System.Drawing.Point(267, 0);

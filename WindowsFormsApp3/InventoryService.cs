@@ -20,7 +20,7 @@ namespace WindowsFormsApp3
             {
                 string[] parts = line.Split(',');
 
-                if (parts.Length >= 4)
+                if (parts.Length >= 5)
                 {
                     try
                     {
@@ -28,7 +28,7 @@ namespace WindowsFormsApp3
                         string name = parts[1];
                         string brand = parts[2];
                         decimal price = decimal.Parse(parts[3]) / 100m;
-                        int quantity = 0;
+                        int quantity = int.Parse(parts[4]);
 
                         products.Add(new Product(id, name, brand, price, quantity));
                     }

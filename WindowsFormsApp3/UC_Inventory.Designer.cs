@@ -77,9 +77,9 @@
             this.gbProductDetails.Controls.Add(this.btnAdd);
             this.gbProductDetails.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gbProductDetails.Location = new System.Drawing.Point(25, 50);
-            this.gbProductDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbProductDetails.Margin = new System.Windows.Forms.Padding(4);
             this.gbProductDetails.Name = "gbProductDetails";
-            this.gbProductDetails.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbProductDetails.Padding = new System.Windows.Forms.Padding(4);
             this.gbProductDetails.Size = new System.Drawing.Size(364, 342);
             this.gbProductDetails.TabIndex = 0;
             this.gbProductDetails.TabStop = false;
@@ -89,7 +89,7 @@
             // 
             this.btnClear.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnClear.Location = new System.Drawing.Point(104, 281);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(159, 23);
             this.btnClear.TabIndex = 17;
@@ -100,7 +100,7 @@
             // txtQuantity
             // 
             this.txtQuantity.Location = new System.Drawing.Point(129, 225);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(132, 22);
             this.txtQuantity.TabIndex = 16;
@@ -120,7 +120,7 @@
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(129, 20);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(132, 22);
             this.txtID.TabIndex = 14;
@@ -139,7 +139,7 @@
             // txtBrand
             // 
             this.txtBrand.Location = new System.Drawing.Point(129, 181);
-            this.txtBrand.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBrand.Margin = new System.Windows.Forms.Padding(4);
             this.txtBrand.Name = "txtBrand";
             this.txtBrand.Size = new System.Drawing.Size(132, 22);
             this.txtBrand.TabIndex = 11;
@@ -147,7 +147,7 @@
             // txtPrice
             // 
             this.txtPrice.Location = new System.Drawing.Point(129, 126);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(132, 22);
             this.txtPrice.TabIndex = 10;
@@ -155,7 +155,7 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(129, 70);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(132, 22);
             this.txtName.TabIndex = 9;
@@ -197,7 +197,7 @@
             // 
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnUpdate.Location = new System.Drawing.Point(191, 311);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(117, 23);
             this.btnUpdate.TabIndex = 5;
@@ -209,7 +209,7 @@
             // 
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAdd.Location = new System.Drawing.Point(28, 311);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(109, 23);
             this.btnAdd.TabIndex = 3;
@@ -222,7 +222,7 @@
             this.txtDelete.BackColor = System.Drawing.SystemColors.Window;
             this.txtDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtDelete.Location = new System.Drawing.Point(117, 22);
-            this.txtDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDelete.Margin = new System.Windows.Forms.Padding(4);
             this.txtDelete.Name = "txtDelete";
             this.txtDelete.Size = new System.Drawing.Size(116, 22);
             this.txtDelete.TabIndex = 12;
@@ -232,7 +232,7 @@
             this.btnDelete.BackColor = System.Drawing.Color.AliceBlue;
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnDelete.Location = new System.Drawing.Point(0, 23);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(109, 23);
             this.btnDelete.TabIndex = 4;
@@ -254,7 +254,7 @@
             this.ProductQuantity});
             this.dgvInventory.GridColor = System.Drawing.Color.Gray;
             this.dgvInventory.Location = new System.Drawing.Point(442, 50);
-            this.dgvInventory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvInventory.Margin = new System.Windows.Forms.Padding(4);
             this.dgvInventory.Name = "dgvInventory";
             this.dgvInventory.ReadOnly = true;
             this.dgvInventory.RowHeadersWidth = 51;
@@ -268,6 +268,7 @@
             this.ProductID.HeaderText = "ID";
             this.ProductID.MinimumWidth = 6;
             this.ProductID.Name = "ProductID";
+            this.ProductID.ReadOnly = true;
             this.ProductID.Width = 125;
             // 
             // ProductName
@@ -276,6 +277,7 @@
             this.ProductName.HeaderText = "Name";
             this.ProductName.MinimumWidth = 6;
             this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
             this.ProductName.Width = 125;
             // 
             // ProductPrice
@@ -284,6 +286,7 @@
             this.ProductPrice.HeaderText = "Price";
             this.ProductPrice.MinimumWidth = 6;
             this.ProductPrice.Name = "ProductPrice";
+            this.ProductPrice.ReadOnly = true;
             this.ProductPrice.Width = 125;
             // 
             // ProductBrand
@@ -292,6 +295,7 @@
             this.ProductBrand.HeaderText = "Brand";
             this.ProductBrand.MinimumWidth = 6;
             this.ProductBrand.Name = "ProductBrand";
+            this.ProductBrand.ReadOnly = true;
             this.ProductBrand.Width = 125;
             // 
             // ProductQuantity
@@ -300,6 +304,7 @@
             this.ProductQuantity.HeaderText = "Quantity";
             this.ProductQuantity.MinimumWidth = 6;
             this.ProductQuantity.Name = "ProductQuantity";
+            this.ProductQuantity.ReadOnly = true;
             this.ProductQuantity.Width = 125;
             // 
             // panel2
@@ -311,7 +316,7 @@
             this.panel2.Controls.Add(this.gbProductDetails);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1073, 606);
             this.panel2.TabIndex = 2;
@@ -321,7 +326,7 @@
             this.btnSave.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSave.Location = new System.Drawing.Point(101, 532);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(159, 28);
             this.btnSave.TabIndex = 7;
@@ -335,9 +340,9 @@
             this.groupBox2.Controls.Add(this.txtDelete);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Location = new System.Drawing.Point(25, 415);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(364, 71);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
@@ -348,7 +353,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_Inventory";
             this.Size = new System.Drawing.Size(1073, 606);
             this.Load += new System.EventHandler(this.Inventory_Load);

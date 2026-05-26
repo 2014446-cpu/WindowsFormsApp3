@@ -47,7 +47,7 @@
             // btnLoadOrder
             // 
             this.btnLoadOrder.Location = new System.Drawing.Point(1027, 491);
-            this.btnLoadOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLoadOrder.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoadOrder.Name = "btnLoadOrder";
             this.btnLoadOrder.Size = new System.Drawing.Size(100, 28);
             this.btnLoadOrder.TabIndex = 23;
@@ -58,7 +58,7 @@
             // btnSaveOrder
             // 
             this.btnSaveOrder.Location = new System.Drawing.Point(745, 491);
-            this.btnSaveOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSaveOrder.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveOrder.Name = "btnSaveOrder";
             this.btnSaveOrder.Size = new System.Drawing.Size(100, 28);
             this.btnSaveOrder.TabIndex = 22;
@@ -89,7 +89,7 @@
             // btnCheckout
             // 
             this.btnCheckout.Location = new System.Drawing.Point(525, 491);
-            this.btnCheckout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCheckout.Margin = new System.Windows.Forms.Padding(4);
             this.btnCheckout.Name = "btnCheckout";
             this.btnCheckout.Size = new System.Drawing.Size(100, 28);
             this.btnCheckout.TabIndex = 19;
@@ -99,7 +99,7 @@
             // btnRemove
             // 
             this.btnRemove.Location = new System.Drawing.Point(289, 491);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(177, 28);
             this.btnRemove.TabIndex = 18;
@@ -109,7 +109,7 @@
             // btnAddToOrder
             // 
             this.btnAddToOrder.Location = new System.Drawing.Point(93, 491);
-            this.btnAddToOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddToOrder.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddToOrder.Name = "btnAddToOrder";
             this.btnAddToOrder.Size = new System.Drawing.Size(100, 28);
             this.btnAddToOrder.TabIndex = 17;
@@ -130,7 +130,7 @@
             // txtDescription
             // 
             this.txtDescription.Location = new System.Drawing.Point(993, 220);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(132, 22);
             this.txtDescription.TabIndex = 15;
@@ -138,7 +138,7 @@
             // txtOrderName
             // 
             this.txtOrderName.Location = new System.Drawing.Point(993, 154);
-            this.txtOrderName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtOrderName.Margin = new System.Windows.Forms.Padding(4);
             this.txtOrderName.Name = "txtOrderName";
             this.txtOrderName.Size = new System.Drawing.Size(132, 22);
             this.txtOrderName.TabIndex = 14;
@@ -146,9 +146,10 @@
             // dgvCurrentOrder
             // 
             this.dgvCurrentOrder.AllowDrop = true;
+            this.dgvCurrentOrder.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvCurrentOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCurrentOrder.Location = new System.Drawing.Point(289, 71);
-            this.dgvCurrentOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCurrentOrder.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCurrentOrder.Name = "dgvCurrentOrder";
             this.dgvCurrentOrder.RowHeadersWidth = 51;
             this.dgvCurrentOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -157,9 +158,10 @@
             // 
             // dgvAvailable
             // 
+            this.dgvAvailable.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvAvailable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAvailable.Location = new System.Drawing.Point(48, 71);
-            this.dgvAvailable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvAvailable.Margin = new System.Windows.Forms.Padding(4);
             this.dgvAvailable.Name = "dgvAvailable";
             this.dgvAvailable.RowHeadersWidth = 51;
             this.dgvAvailable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -183,7 +185,7 @@
             this.Controls.Add(this.txtOrderName);
             this.Controls.Add(this.dgvCurrentOrder);
             this.Controls.Add(this.dgvAvailable);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_Orders";
             this.Size = new System.Drawing.Size(1187, 615);
             this.Load += new System.EventHandler(this.UC_Orders_Load);
