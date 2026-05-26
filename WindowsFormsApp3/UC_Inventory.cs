@@ -124,7 +124,7 @@ namespace WindowsFormsApp3
                     productToUpdate.ProductQuantity = int.Parse(txtQuantity.Text);
 
                     // 5. Refresh the grid to show the updated data
-                    _bindingSource.ResetBindings(false);
+                    _bindingSource.ResetBindings(false);//////////////
                     dgvInventory.Refresh();
 
                     // 6. Clear input fields

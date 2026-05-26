@@ -53,6 +53,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.gbProductDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             this.panel2.SuspendLayout();
@@ -76,7 +77,7 @@
             this.gbProductDetails.Controls.Add(this.btnUpdate);
             this.gbProductDetails.Controls.Add(this.btnAdd);
             this.gbProductDetails.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gbProductDetails.Location = new System.Drawing.Point(25, 50);
+            this.gbProductDetails.Location = new System.Drawing.Point(25, 82);
             this.gbProductDetails.Margin = new System.Windows.Forms.Padding(4);
             this.gbProductDetails.Name = "gbProductDetails";
             this.gbProductDetails.Padding = new System.Windows.Forms.Padding(4);
@@ -253,7 +254,7 @@
             this.ProductBrand,
             this.ProductQuantity});
             this.dgvInventory.GridColor = System.Drawing.Color.Gray;
-            this.dgvInventory.Location = new System.Drawing.Point(442, 50);
+            this.dgvInventory.Location = new System.Drawing.Point(442, 92);
             this.dgvInventory.Margin = new System.Windows.Forms.Padding(4);
             this.dgvInventory.Name = "dgvInventory";
             this.dgvInventory.ReadOnly = true;
@@ -310,6 +311,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.dgvInventory);
@@ -325,7 +327,7 @@
             // 
             this.btnSave.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSave.Location = new System.Drawing.Point(101, 532);
+            this.btnSave.Location = new System.Drawing.Point(101, 561);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(159, 28);
@@ -339,7 +341,7 @@
             this.groupBox2.Controls.Add(this.btnDelete);
             this.groupBox2.Controls.Add(this.txtDelete);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(25, 415);
+            this.groupBox2.Location = new System.Drawing.Point(25, 444);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
@@ -347,6 +349,17 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Delete Product with ID/Name";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("MS Reference Sans Serif", 40.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(365, -2);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(443, 82);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "INVENTORY";
             // 
             // UC_Inventory
             // 
@@ -361,6 +374,7 @@
             this.gbProductDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -394,5 +408,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label label6;
     }
 }
