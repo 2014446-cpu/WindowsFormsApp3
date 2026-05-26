@@ -16,7 +16,7 @@ namespace WindowsFormsApp3
     {
         private BindingList<Product> _inventoryList = new BindingList<Product>();
         private BindingSource _bindingSource = new BindingSource();
-        string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "product.csv");
+        string filePath = "product.csv";
         public UC_Inventory()
         {
             InitializeComponent();
@@ -24,9 +24,12 @@ namespace WindowsFormsApp3
 
         private void Inventory_Load(object sender, EventArgs e)
         {
-            string path = filePath;
+            LoadDataFromCSV();
+        }
 
-            var tempData = InventoryService.LoadFromCSV(path);
+        private void LoadDataFromCSV()
+        {
+            var tempData = InventoryService.LoadFromCSV(filePath);
             _inventoryList.Clear();
 
             foreach (var item in tempData)
@@ -51,6 +54,7 @@ namespace WindowsFormsApp3
             // 4. Refresh the grid to show the new item
             _bindingSource.ResetBindings(false);
 
+
             // 5. Clear fields for the next entry
             ClearFields();
         }
@@ -61,7 +65,7 @@ namespace WindowsFormsApp3
             // This regex allows only letters, numbers, and spaces
             if (!Regex.IsMatch(txtName.Text, @"^[a-zA-Z0-9 ]+$"))
             {
-                MessageBox.Show("Product Name contains invalid characters or is blank.");
+                MessageBox.Show("Product Name contains invalid characters.");
                 return false;
             }
 
@@ -177,15 +181,16 @@ namespace WindowsFormsApp3
         {
             try
             {
-                string path = filePath;
-
-                // Convert the BindingList to a standard List to pass to the service
+                // Convert BindingList to List
                 List<Product> listToSave = _inventoryList.ToList();
 
-                // Call the save method
-                InventoryService.SaveToCSV(path, listToSave);
+                // Save to CSV file
+                InventoryService.SaveToCSV(filePath, listToSave);
 
-                MessageBox.Show("Changes saved to CSV successfully.");
+                // Reload from CSV to refresh grid with saved data
+                LoadDataFromCSV();
+
+                MessageBox.Show("Changes saved to CSV successfully!");
             }
             catch (Exception ex)
             {

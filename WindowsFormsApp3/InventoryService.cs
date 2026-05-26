@@ -12,38 +12,45 @@ namespace WindowsFormsApp3
         public static List<Product> LoadFromCSV(string filePath)
         {
             List<Product> products = new List<Product>();
-            if (!File.Exists(filePath)) return products;
+            if (!File.Exists(filePath))
+                return products;
 
-            var lines = File.ReadAllLines(filePath).Skip(1);
-
-            foreach (string line in lines)
+            try
             {
-                string[] parts = line.Split(',');
+                var lines = File.ReadAllLines(filePath).Skip(1);
 
-                if (parts.Length >= 5)
+                foreach (string line in lines)
                 {
-                    try
-                    {
-                        int id = int.Parse(parts[0]);
-                        string name = parts[1];
-                        string brand = parts[2];
-                        decimal price = decimal.Parse(parts[3]) / 100m;
-                        int quantity = int.Parse(parts[4]);
+                    string[] parts = line.Split(',');
 
-                        products.Add(new Product(id, name, brand, price, quantity));
-                    }
-                    catch
+                    if (parts.Length >= 5)
                     {
-                        // Skips rows with formatting rows: expectio
+                        try
+                        {
+                            int id = int.Parse(parts[0]);
+                            string name = parts[1];
+                            string brand = parts[2];
+                            decimal price = decimal.Parse(parts[3]) / 100m;
+                            int quantity = int.Parse(parts[4]);
+
+                            products.Add(new Product(id, name, brand, price, quantity));
+                        }
+                        catch (Exception ex)
+                        {
+                            System.Diagnostics.Debug.WriteLine($"Error parsing line: {line}, Error: {ex.Message}");
+                        }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error reading CSV file: {ex.Message}");
             }
 
             return products;
         }
 
-            
-                public static void SaveToCSV(string filePath, List<Product> products)
+        public static void SaveToCSV(string filePath, List<Product> products)
                 {
                     using (StreamWriter writer = new StreamWriter(filePath))
                     {
